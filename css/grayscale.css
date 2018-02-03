@@ -51,7 +51,9 @@ a:focus, a:hover {
   color: #1d9b6c;
 }
 
-div.container {
+div.container-sign {
+  margin: auto;
+  width: 80%;
   background-color: #4a4642;
   border-style: solid;
   border-color: white;
