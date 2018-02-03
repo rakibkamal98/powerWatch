@@ -51,6 +51,19 @@ a:focus, a:hover {
   color: #1d9b6c;
 }
 
+div.container {
+  background-color: #4a4642;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px;
+  -moz-box-shadow: 0 0 30px 5px #999;
+-webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+body.sign-bg {
+  background-image: url("../img/Watch.jpg");
+}
 #mainNav {
   font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 0;
