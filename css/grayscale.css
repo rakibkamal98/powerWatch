@@ -137,7 +137,7 @@ body.sign-bg {
   padding: 200px 0;
   text-align: center;
   color: white;
-  background: url("../img/intro-bg.jpg") no-repeat bottom center scroll;
+  background: url("../img/power2.jpg") no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -151,7 +151,7 @@ body.sign-bg {
 }
 
 .masthead .intro-body .brand-heading {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .masthead .intro-body .intro-text {
@@ -164,7 +164,7 @@ body.sign-bg {
     padding: 0;
   }
   .masthead .intro-body .brand-heading {
-    font-size: 100px;
+    font-size: 70px;
   }
   .masthead .intro-body .intro-text {
     font-size: 22px;
@@ -199,7 +199,7 @@ body.sign-bg {
 
 .download-section {
   color: white;
-  background: url("../img/downloads-bg.jpg") no-repeat center center scroll;
+  background: url("../img/apple.jpg") no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
