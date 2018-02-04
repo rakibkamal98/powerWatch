@@ -60,7 +60,10 @@ div.container-sign {
   border-width: 1px;
   padding: 10px;
   -moz-box-shadow: 0 0 30px 5px #999;
--webkit-box-shadow: 0 0 30px 5px #999;
+  -webkit-box-shadow: 0 0 30px 5px #999;
+  position: relative;
+  top: 50%;
+  transform: translateY(-95%);
 }
 
 body.sign-bg {
