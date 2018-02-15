@@ -65,6 +65,20 @@ div.container-sign {
   top: 50%;
   transform: translateY(-95%);
 }
+div.container-contact {
+  margin: auto;
+  width: 80%;
+  background-color: #4a4642;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px;
+  -moz-box-shadow: 0 0 30px 5px #999;
+  -webkit-box-shadow: 0 0 30px 5px #999;
+  position: relative;
+  top: 50%;
+  transform: translateY(-95%);
+}
 
 body.sign-bg {
   background-image: url("../img/Watch.jpg");
