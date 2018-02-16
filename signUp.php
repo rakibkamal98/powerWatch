@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!--<form action="connection.php"> -->
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -57,25 +57,30 @@
     <!-- End of Navigation-->
 
     <div class="container-sign">
-
+<form action="infosend.php" method="POST"> 
       <form class="form-signin">
         <h2 class="form-signin-heading" style="text-align: center;">Sign Up</h2>
 
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="Email" required autofocus>
 
         <label for="reInputEmail" class="sr-only">Email address</label>
         <input type="email" id="reInputEmail" class="form-control" placeholder="Re-Enter Email address" required>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="Password" required>
 
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #a39d96">Sign Up</button>
+
+        <!--<button class="btn btn-lg btn-primary btn-block" 
+          type="submit"
+        action = "submit"
+       style="background-color: #a39d96">Sign Up</button>-->
+       <input type="submit" value="sign up">
       </form>
 
     </div> <!-- /container -->
