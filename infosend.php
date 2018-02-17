@@ -8,7 +8,7 @@ $city = $_POST['City'];
 $state = $_POST['State'];
 $zipcode = $_POST['Zipcode'];
 //$password = $_POST['Password'];
-
+$password = hash('sha512', $password);
 
 $sql = "INSERT INTO customer_info (Name,Email,Password,Address,City,State,Zipcode)
 	VALUES('$name','$email','$password','$address','$city','$state','$zipcode')";
