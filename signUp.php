@@ -55,12 +55,15 @@
       </div>
     </nav>
     <!-- End of Navigation-->
-
-    <div class="container-sign">
-<form action="infosend.php" method="POST"> 
+<div class="container" style ="padding-top: 600px">
+  <div class="container-sign">
+    <form action="infosend.php" method="POST"> 
       <form class="form-signin">
         <h2 class="form-signin-heading" style="text-align: center;">Sign Up</h2>
 
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" id="inputName" class="form-control" placeholder="Name" name="Name" required>      
+        
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="Email" required autofocus>
 
@@ -69,6 +72,18 @@
 
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="Password" required>
+
+        <label for="inputAddress" class="sr-only">Address</label>
+        <input type="address" id="inputAddress" class="form-control" placeholder="Address" name="Address" required>
+
+        <label for="inputCity" class="sr-only">City</label>
+        <input type="city" id="inputCity" class="form-control" placeholder="City" name="City" required>
+
+        <label for="inputState" class="sr-only">State</label>
+        <input type="state" id="inputState" class="form-control" placeholder="State" name="State" required>
+
+        <label for="inputZipcode" class="sr-only">Zipcode</label>
+        <input type="zipcode" id="inputZipcode" class="form-control" placeholder="Zipcode" name="Zipcode" required>
 
         <div class="checkbox">
           <label>
@@ -84,7 +99,7 @@
       </form>
 
     </div> <!-- /container -->
-
+  </div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
