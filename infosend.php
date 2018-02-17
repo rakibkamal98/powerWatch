@@ -1,5 +1,14 @@
 <?php 
-include_once "connection.php";
+#include_once "connection.php";
+
+#--include -- 
+$conn = mysqli_connect('localhost','root','','ecommerce');
+if(! $conn){
+	die('Could not connect: ' . mysqli_error());
+}
+#--End of include
+
+
 $name = $_POST['Name'];
 $email = $_POST['Email'];
 $password = $_POST['Password'];
@@ -10,8 +19,18 @@ $zipcode = $_POST['Zipcode'];
 //$password = $_POST['Password'];
 $password = hash('sha512', $password);
 
-$sql = "INSERT INTO customer_info (Name,Email,Password,Address,City,State,Zipcode)
-	VALUES('$name','$email','$password','$address','$city','$state','$zipcode')";
+
+if($email != ""){
+	$sql = "SELECT * FROM customer_info WHERE Email='" .$email. "'";
+	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result)>0){
+		echo "Email already exists";
+	} else {
+		$sql = "INSERT INTO customer_info (Name,Email,Password,Address,City,State,Zipcode)
+			VALUES('$name','$email','$password','$address','$city','$state','$zipcode')";
+	}
+}
+
 $value = mysqli_query($conn, $sql);
 
 echo 'debug line'
