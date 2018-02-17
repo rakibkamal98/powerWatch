@@ -62,7 +62,7 @@
         <h2 class="form-signin-heading" style="text-align: center;">Sign Up</h2>
 
         <label for="inputName" class="sr-only">Name</label>
-        <input type="name" id="inputName" class="form-control" placeholder="Name" name="Name" required>      
+        <input type="name" id="inputName" class="form-control" placeholder="Name" name="Name" pattern="[a-zA-Z][a-zA-Z ]{1,}" autofocus required title="Name must contain only letters and spaces!">      
         
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="Email" required autofocus>
@@ -74,10 +74,10 @@
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="Password" required>
 
         <label for="inputAddress" class="sr-only">Address</label>
-        <input type="address" id="inputAddress" class="form-control" placeholder="Address" name="Address" required>
+        <input type="address" id="inputAddress" class="form-control" placeholder="Address" name="Address" pattern="\w+(\s\w+){2,}" name="Address" autofocus required title="Enter a valid address">
 
         <label for="inputCity" class="sr-only">City</label>
-        <input type="city" id="inputCity" class="form-control" placeholder="City" name="City" required>
+        <input type="city" id="inputCity" class="form-control" placeholder="City" pattern="[a-zA-Z][a-zA-Z ]{1,}" name="City" autofocus required title="City must contain only letters and spaces!">
 <!--
         <label for="inputState" class="sr-only">State</label>
         <input type="state" id="inputState" class="form-control" placeholder="State" name="State" required>
@@ -137,7 +137,7 @@
         </select>
 
         <label for="inputZipcode" class="sr-only">Zipcode</label>
-        <input type="zipcode" id="inputZipcode" class="form-control" placeholder="Zipcode" name="Zipcode" required>
+        <input type="zipcode" id="inputZipcode" class="form-control" placeholder="Zipcode" name="Zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$" autofocus required title="Must be a valid zipcode!">
 
         <div class="checkbox">
           <label>
