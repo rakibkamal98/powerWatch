@@ -45,7 +45,7 @@
               <a class="nav-link js-scroll-trigger" href="signIn.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="signUp.html">Sign Up</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signUp.php">Sign Up</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="contactUs.html">Contact Us</a>
@@ -55,33 +55,37 @@
       </div>
     </nav>
     <!-- End of Navigation-->
-<div class="container" style ="padding-top: 600px">
+<div class="container" style ="padding-top: 700px">
   <div class="container-sign">
     <form action="infosend.php" method="POST"> 
       <form class="form-signin">
         <h2 class="form-signin-heading" style="text-align: center;">Sign Up</h2>
 
+
         <label for="inputName" class="sr-only">Name</label>
+        <a>Name:</a>
         <input type="name" id="inputName" class="form-control" placeholder="Name" name="Name" pattern="[a-zA-Z][a-zA-Z ]{1,}" autofocus required title="Name must contain only letters and spaces!">      
         
         <label for="inputEmail" class="sr-only">Email address</label>
+        <a>Email:</a>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="Email" required autofocus>
 
-        <label for="reInputEmail" class="sr-only">Email address</label>
-        <input type="email" id="reInputEmail" class="form-control" placeholder="Re-Enter Email address" required>
-
         <label for="inputPassword" class="sr-only">Password</label>
+        <a>Password:</a>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="Password" required>
 
         <label for="inputAddress" class="sr-only">Address</label>
+        <a>Address:</a>
         <input type="address" id="inputAddress" class="form-control" placeholder="Address" name="Address" pattern="\w+(\s\w+){2,}" name="Address" autofocus required title="Enter a valid address">
 
         <label for="inputCity" class="sr-only">City</label>
+        <a>City:</a>
         <input type="city" id="inputCity" class="form-control" placeholder="City" pattern="[a-zA-Z][a-zA-Z ]{1,}" name="City" autofocus required title="City must contain only letters and spaces!">
 <!--
         <label for="inputState" class="sr-only">State</label>
         <input type="state" id="inputState" class="form-control" placeholder="State" name="State" required>
 -->
+        <a>State:</a>
         <select type="state" id="inputState" class="form-control" name="State" placeholder="State">
           <option value="state">State</option>
           <option value="AL">AL</option>
@@ -137,19 +141,15 @@
         </select>
 
         <label for="inputZipcode" class="sr-only">Zipcode</label>
+        <a>Zip Code:</a>
         <input type="zipcode" id="inputZipcode" class="form-control" placeholder="Zipcode" name="Zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$" autofocus required title="Must be a valid zipcode!">
 
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
 
         <!--<button class="btn btn-lg btn-primary btn-block" 
           type="submit"
         action = "submit"
        style="background-color: #a39d96">Sign Up</button>-->
-       <input type="submit" value="sign up">
+       <input type="submit" value="Sign up">
       </form>
 
     </div> <!-- /container -->
