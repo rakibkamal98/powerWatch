@@ -33,7 +33,6 @@ if($email != ""){
 
 $value = mysqli_query($conn, $sql);
 
-echo 'debug line'
 
 #how to insert php variables into database with query 
 #$queryemail = "SELECT * FROM `customer info` WHERE email='$Email'";
