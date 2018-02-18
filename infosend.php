@@ -25,11 +25,12 @@ if($email != ""){
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result)>0){
 		$message = 'Incorrect email';
-		header("Location: http://localhost/powerWatch/signUp.php?message=Email already exists");
+		header("Location: http://localhost/powerWatch/signUp.php?message=Email already exists&welcomeMessage=");
 	} else {
 		$message = '';
 		$sql = "INSERT INTO customer_info (Name,Email,Password,Address,City,State,Zipcode)
 			VALUES('$name','$email','$password','$address','$city','$state','$zipcode')";
+		header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name");
 	}
 }
 

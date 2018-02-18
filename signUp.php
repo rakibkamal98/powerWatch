@@ -44,7 +44,7 @@
               <a class="nav-link js-scroll-trigger" href="signIn.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signUp.php?message=">Sign Up</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signUp.php?message=&welcomeMessage=">Sign Up</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="contactUs.html">Contact Us</a>
@@ -60,7 +60,7 @@
       <form class="form-signin">
         <h2 class="form-signin-heading" style="text-align: center;">Sign Up</h2>
 
-
+        <center><a><?php echo $_GET['welcomeMessage'];?></a></center>
         <label for="inputName" class="sr-only">Name</label>
         <a>Name:</a>
         <input type="name" id="inputName" class="form-control" name="Name" pattern="[a-zA-Z][a-zA-Z ]{1,}" autofocus required title="Name must contain only letters and spaces!">      
