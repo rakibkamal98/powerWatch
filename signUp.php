@@ -76,7 +76,7 @@
 
         <label for="inputAddress" class="sr-only">Address</label>
         <a>Address:</a>
-        <input type="address" id="inputAddress" class="form-control" name="Address" pattern="\w+(\s\w+){2,}" name="Address" autofocus required title="Enter a valid address">
+        <input type="address" id="inputAddress" class="form-control" name="Address" pattern="\w+(\s\w+){2,}+\s" name="Address" autofocus required title="Enter a valid address">
 
         <label for="inputCity" class="sr-only">City</label>
         <a>City:</a>
