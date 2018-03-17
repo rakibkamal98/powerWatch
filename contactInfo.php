@@ -29,12 +29,12 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 //Recipients
-$mail->setFrom('powerwatch0@gmail.com', 'Power Watch');
-$mail->addAddress($email, $name);     // Add a recipient
+$mail->setFrom($email, $name);
+$mail->addAddress('powerwatch0@gmail.com');     // Add a recipient
 
 //Content
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = 'Here is the subject';
+$mail->Subject = $email;
 $mail->Body    = $message;
 $mail->AltBody = $message;
 
