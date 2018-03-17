@@ -57,7 +57,8 @@
             <form action="contactInfo.php" method="POST">
             <div >
                 <div id="form_container">
-                    <h2 class="form-signin-heading">Contact Us</h2> 
+                    <h2 class="form-signin-heading">Contact Us</h2>
+                    <center><a><?php echo $_GET['emailSent']?></a></center>
                     <p> Please send your message below. We will get back to you at the earliest! </p>
                     <form role="form" method="post" id="reused_form">
                         <div class="row">
