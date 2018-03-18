@@ -21,11 +21,6 @@
     <!-- Custom styles for this template -->
     <link href="css/grayscale.css" rel="stylesheet">
 
-    <!-- Links for product reviews
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-
   </head>
 
   <body>
@@ -96,7 +91,7 @@
             <div class="row" style="margin-top:20px; margin-bottom: 20px">
                <div class="col-md-12">
                <form class="formtest">
-                 <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#1" onClick="esconder(this)">Leave a review</button>
+                 <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#1" onClick="hide(this)">Leave a review</button>
                    <div id="1" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <br/>
@@ -113,6 +108,7 @@
           </div>  
         </form>
         </div>    
+        </div>
         </div>
         <!-- End of Product review-->
 
@@ -132,13 +128,39 @@
         <div class="col-md-5">
           <h3>The Knokia</h3>
           <p>Feel protected with our most durable case, The Knokia. With a Valyrian Steel interior, this case will tough it during your wildest adventures.</p>
-          <!-- <a class="btn btn-primary" href="#">Buy</a> -->
-          <form action="https://test.bitpay.com/checkout" method="post" >
-  <input type="hidden" name="action" value="checkout" />
-  <input type="hidden" name="posData" value="" />
-  <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhudP5GeIHelgtGmF0+Jk/kJjNB2HlxJLj4vq4jMg8sauDT8an+1mXSyz5W4ZmTrg/5OXKuHQK/ADnOOd4GZeT1KuBpHt/ZznnvhvGKE2bTioZ4AtFcPauvUmcY9/+YOiE" />
-  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-</form>
+          <!-- Button -->
+			   <form action="https://test.bitpay.com/checkout" method="post" >
+			  <input type="hidden" name="action" value="checkout" />
+			  <input type="hidden" name="posData" value="" />
+			  <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhudP5GeIHelgtGmF0+Jk/kJjNB2HlxJLj4vq4jMg8sauDT8an+1mXSyz5W4ZmTrg/5OXKuHQK/ADnOOd4GZeT1KuBpHt/ZznnvhvGKE2bTioZ4AtFcPauvUmcY9/+YOiE" />
+			  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+			`</form>
+		<!-- End of button-->
+		<!-- Product review-->
+          <div class="container">
+            <div class="row" style="margin-top:20px; margin-bottom: 20px">
+               <div class="col-md-12">
+               <form class="formtest">
+                 <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#2" onClick="esconder(this)">Leave a review</button>
+                   <div id="2" class="collapse">
+                     <div class="col-md-12 avaliar ">
+                      <br/>
+                       <textarea cols="50" id="reviewTextArea" name="comment" value="" placeholder="Tell us what you think!"></textarea>       
+                                    
+                        <div class="stars starrr" data-rating="0">
+                      <input class="nota" name="rating" type="hidden" value="">
+                       </div>
+                <div class="text-right">  
+                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                </div>  
+            </div>
+          </div>  
+        </form>
+        </div>    
+        </div>
+        </div>
+        <!-- End of Product review-->
         </div>
       </div>
       <!-- /.row -->
@@ -163,6 +185,31 @@
             <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
             </form>
         <!-- End of button-->
+        <!-- Product review-->
+          <div class="container">
+            <div class="row" style="margin-top:20px; margin-bottom: 20px">
+               <div class="col-md-12">
+               <form class="formtest">
+                 <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#3" onClick="esconder(this)">Leave a review</button>
+                   <div id="3" class="collapse">
+                     <div class="col-md-12 avaliar ">
+                      <br/>
+                       <textarea cols="50" id="reviewTextArea" name="comment" value="" placeholder="Tell us what you think!"></textarea>       
+                                    
+                        <div class="stars starrr" data-rating="0">
+                      <input class="nota" name="rating" type="hidden" value="">
+                       </div>
+                <div class="text-right">  
+                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                </div>  
+            </div>
+          </div>  
+        </form>
+        </div>    
+        </div>
+        </div>
+        <!-- End of Product review-->
         </div>
       </div>
       <!-- /.row -->
@@ -188,6 +235,31 @@
             <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
             </form>
         <!-- End of button-->
+        <!-- Product review-->
+          <div class="container">
+            <div class="row" style="margin-top:20px; margin-bottom: 20px">
+               <div class="col-md-12">
+               <form class="formtest">
+                 <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#4" onClick="esconder(this)">Leave a review</button>
+                   <div id="4" class="collapse">
+                     <div class="col-md-12 avaliar ">
+                      <br/>
+                       <textarea cols="50" id="reviewTextArea" name="comment" value="" placeholder="Tell us what you think!"></textarea>       
+                                    
+                        <div class="stars starrr" data-rating="0">
+                      <input class="nota" name="rating" type="hidden" value="">
+                       </div>
+                <div class="text-right">  
+                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                </div>  
+            </div>
+          </div>  
+        </form>
+        </div>    
+        </div>
+    	</div>
+        <!-- End of Product review-->
         </div>
       </div>
       <!-- /.row -->
