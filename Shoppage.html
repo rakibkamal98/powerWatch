@@ -21,6 +21,11 @@
     <!-- Custom styles for this template -->
     <link href="css/grayscale.css" rel="stylesheet">
 
+    <!-- Links for product reviews
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
   </head>
 
   <body>
@@ -76,13 +81,40 @@
         <div class="col-md-5">
           <h3>Vortex 350</h3>
           <p>This is an authentic Smart Watch Case that is easily portable, small, and great to use for active lifestyles</p>
-          <!-- <a class="btn btn-primary" href="#">Buy</a> -->
+          <!-- Buy Button -->
           <form action="https://test.bitpay.com/checkout" method="post" >
 			  <input type="hidden" name="action" value="checkout" />
 			  <input type="hidden" name="posData" value="" />
 			  <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMMCfywRrKpTx20b47a2Hbf8fhtTF2S4VfYuMCDCnvY4ig" />
 			  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-		  </form>
+		    </form>
+        <!-- End of button-->
+
+        <!-- Product review-->
+          <div class="container">
+            <div class="row" style="margin-top:20px; margin-bottom: 20px">
+               <div class="col-md-12">
+               <form class="formtest">
+                 <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#1" onClick="esconder(this)">Leave a review</button>
+                   <div id="1" class="collapse">
+                     <div class="col-md-12 avaliar ">
+                      <br/>
+                       <textarea cols="50" id="reviewTextArea" name="comment" value="" placeholder="Tell us what you think!"></textarea>       
+                                    
+                        <div class="stars starrr" data-rating="0">
+                      <input class="nota" name="rating" type="hidden" value="">
+                       </div>
+                <div class="text-right">  
+                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                </div>  
+            </div>
+          </div>  
+        </form>
+        </div>    
+        </div>
+        <!-- End of Product review-->
+
         </div>
       </div>
       <!-- /.row -->
@@ -122,7 +154,14 @@
         <div class="col-md-5">
           <h3>Netero</h3>
           <p>With inner linings made of Diamonds, this extravagent Watch Case oozes luxury. </p>
-          <a class="btn btn-primary" href="#">Buy</a>
+         <!-- Buy Button -->
+             <form action="https://test.bitpay.com/checkout" method="post" >
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="" />
+            <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMMCfywRrKpTx20b47a2Hbf8fhtTF2S4VfYuMCDCnvY4ig" />
+            <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+            </form>
+        <!-- End of button-->
         </div>
       </div>
       <!-- /.row -->
@@ -140,37 +179,21 @@
         <div class="col-md-5">
           <h3>Mei</h3>
           <p>Feel protected with wearing Mei, our 500ft water proof Watch Case, with temperature regulating technology. </p>
-          <a class="btn btn-primary" href="#">Buy</a>
+          <!-- Buy Button -->
+            <form action="https://test.bitpay.com/checkout" method="post" >
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="" />
+            <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMMCfywRrKpTx20b47a2Hbf8fhtTF2S4VfYuMCDCnvY4ig" />
+            <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+            </form>
+        <!-- End of button-->
         </div>
       </div>
       <!-- /.row -->
 
       <hr>
 
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
+  
 
     </div>
     <!-- /.container -->
