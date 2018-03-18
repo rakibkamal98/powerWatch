@@ -51,8 +51,8 @@ a:focus, a:hover {
   color: #1d9b6c;
 }
 
-ul {
-  
+ul#review li {
+  display:inline;
 }
 div.container-sign {
   margin: auto;
