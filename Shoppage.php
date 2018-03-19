@@ -1,4 +1,200 @@
-<!DOCTYPE html>
+<?php
+#--include -- 
+$conn = mysqli_connect('localhost','root','','ecommerce');
+if(! $conn){
+	die('Could not connect: ' . mysqli_error());
+}
+#--End of include
+
+#Vortex reviews
+$sql = "SELECT * FROM vortexreviews";
+$result = mysqli_query($conn, $sql);
+$counterVortex = 0;
+$sum = 0;
+$vortexAvg = 0;
+if(mysqli_num_rows($result)>0){
+	while($row = mysqli_fetch_assoc($result)){
+		$sum = $sum + $row["review"];
+		$counterVortex = $counterVortex + 1;
+	}
+	$vortexAvg = $sum/$counterVortex;
+}
+#End vortex review
+
+#Calculate numbers
+#Percentage of 5
+$sql="SELECT * FROM `vortexreviews` WHERE review=5";
+$result = mysqli_query($conn, $sql);
+$numOf5vortex = mysqli_num_rows($result);
+$percOf5vortex = ($numOf5vortex/$counterVortex)*100;
+
+#percentage of 4
+$sql="SELECT * FROM `vortexreviews` WHERE review=4";
+$result = mysqli_query($conn, $sql);
+$numOf4vortex = mysqli_num_rows($result);
+$percOf4vortex = ($numOf4vortex/$counterVortex)*100;
+
+#percentage of 3
+$sql="SELECT * FROM `vortexreviews` WHERE review=3";
+$result = mysqli_query($conn, $sql);
+$numOf3vortex = mysqli_num_rows($result);
+$percOf3vortex = ($numOf3vortex/$counterVortex)*100;
+
+#percentage of 2
+$sql="SELECT * FROM `vortexreviews` WHERE review=2";
+$result = mysqli_query($conn, $sql);
+$numOf2vortex = mysqli_num_rows($result);
+$percOf2vortex = ($numOf2vortex/$counterVortex)*100;
+
+#percentage of 1
+$sql="SELECT * FROM `vortexreviews` WHERE review=1";
+$result = mysqli_query($conn, $sql);
+$numOf1vortex = mysqli_num_rows($result);
+$percOf1vortex = ($numOf1vortex/$counterVortex)*100;
+
+#-----------------------------
+
+#Knokia reviews
+$sql = "SELECT * FROM knokiareviews";
+$result = mysqli_query($conn, $sql);
+$counterKnokia = 0;
+$sum = 0;
+$knokiaAvg = 0;
+if(mysqli_num_rows($result)>0){
+	while($row = mysqli_fetch_assoc($result)){
+		$sum = $sum + $row["review"];
+		$counterKnokia = $counterKnokia + 1;
+	}
+	$knokiaAvg = $sum/$counterKnokia;
+}
+#End knokia review
+
+#Calculate numbers
+#Percentage of 5
+$sql="SELECT * FROM `knokiareviews` WHERE review=5";
+$result = mysqli_query($conn, $sql);
+$numOf5knokia = mysqli_num_rows($result);
+$percOf5knokia = ($numOf5knokia/$counterKnokia)*100;
+
+#percentage of 4
+$sql="SELECT * FROM `knokiareviews` WHERE review=4";
+$result = mysqli_query($conn, $sql);
+$numOf4knokia = mysqli_num_rows($result);
+$percOf4knokia = ($numOf4knokia/$counterKnokia)*100;
+
+#percentage of 3
+$sql="SELECT * FROM `knokiareviews` WHERE review=3";
+$result = mysqli_query($conn, $sql);
+$numOf3knokia = mysqli_num_rows($result);
+$percOf3knokia = ($numOf3knokia/$counterKnokia)*100;
+
+#percentage of 2
+$sql="SELECT * FROM `knokiareviews` WHERE review=2";
+$result = mysqli_query($conn, $sql);
+$numOf2knokia = mysqli_num_rows($result);
+$percOf2knokia = ($numOf2knokia/$counterKnokia)*100;
+
+#percentage of 1
+$sql="SELECT * FROM `knokiareviews` WHERE review=1";
+$result = mysqli_query($conn, $sql);
+$numOf1knokia = mysqli_num_rows($result);
+$percOf1knokia = ($numOf1knokia/$counterKnokia)*100;
+
+#------Netero Reviews-------
+
+#Netero reviews
+$sql = "SELECT * FROM neteroreviews";
+$result = mysqli_query($conn, $sql);
+$counterNetero = 0;
+$sum = 0;
+$neteroAvg = 0;
+if(mysqli_num_rows($result)>0){
+	while($row = mysqli_fetch_assoc($result)){
+		$sum = $sum + $row["review"];
+		$counterNetero = $counterNetero + 1;
+	}
+	$neteroAvg = $sum/$counterNetero;
+}
+#End netero review
+
+#Percentage of 5
+$sql="SELECT * FROM `neteroreviews` WHERE review=5";
+$result = mysqli_query($conn, $sql);
+$numOf5netero = mysqli_num_rows($result);
+$percOf5netero = ($numOf5netero/$counterNetero)*100;
+
+#percentage of 4
+$sql="SELECT * FROM `neteroreviews` WHERE review=4";
+$result = mysqli_query($conn, $sql);
+$numOf4netero = mysqli_num_rows($result);
+$percOf4netero = ($numOf4netero/$counterNetero)*100;
+
+#percentage of 3
+$sql="SELECT * FROM `neteroreviews` WHERE review=3";
+$result = mysqli_query($conn, $sql);
+$numOf3netero = mysqli_num_rows($result);
+$percOf3netero = ($numOf3netero/$counterNetero)*100;
+
+#percentage of 2
+$sql="SELECT * FROM `neteroreviews` WHERE review=2";
+$result = mysqli_query($conn, $sql);
+$numOf2netero = mysqli_num_rows($result);
+$percOf2netero = ($numOf2netero/$counterNetero)*100;
+
+#percentage of 1
+$sql="SELECT * FROM `neteroreviews` WHERE review=1";
+$result = mysqli_query($conn, $sql);
+$numOf1netero = mysqli_num_rows($result);
+$percOf1netero = ($numOf1netero/$counterNetero)*100;
+
+#------Mei Reviews-------
+
+#Mei reviews
+$sql = "SELECT * FROM meireviews";
+$result = mysqli_query($conn, $sql);
+$counterMei = 0;
+$sum = 0;
+$meiAvg = 0;
+if(mysqli_num_rows($result)>0){
+	while($row = mysqli_fetch_assoc($result)){
+		$sum = $sum + $row["review"];
+		$counterMei = $counterMei + 1;
+	}
+	$meiAvg = $sum/$counterMei;
+}
+#End mei review
+
+#Percentage of 5
+$sql="SELECT * FROM `meireviews` WHERE review=5";
+$result = mysqli_query($conn, $sql);
+$numOf5mei = mysqli_num_rows($result);
+$percOf5mei = ($numOf5mei/$counterMei)*100;
+
+#percentage of 4
+$sql="SELECT * FROM `meireviews` WHERE review=4";
+$result = mysqli_query($conn, $sql);
+$numOf4mei = mysqli_num_rows($result);
+$percOf4mei = ($numOf4mei/$counterMei)*100;
+
+#percentage of 3
+$sql="SELECT * FROM `meireviews` WHERE review=3";
+$result = mysqli_query($conn, $sql);
+$numOf3mei = mysqli_num_rows($result);
+$percOf3mei = ($numOf3mei/$counterMei)*100;
+
+#percentage of 2
+$sql="SELECT * FROM `meireviews` WHERE review=2";
+$result = mysqli_query($conn, $sql);
+$numOf2mei = mysqli_num_rows($result);
+$percOf2mei = ($numOf2mei/$counterMei)*100;
+
+#percentage of 1
+$sql="SELECT * FROM `meireviews` WHERE review=1";
+$result = mysqli_query($conn, $sql);
+$numOf1mei = mysqli_num_rows($result);
+$percOf1mei = ($numOf1mei/$counterMei)*100;
+?>
+
 <html lang="en">
 
   <head>
@@ -9,7 +205,6 @@
     <meta name="author" content="">
 
     <title>Power Watch - Shop</title>
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -97,7 +292,7 @@
                    <div id="1" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <!-- Review Area-->
-                      <h1 class="rating-num">Average: 4.0</h1>
+                      <h1 class="rating-num">Average: <?php echo $vortexAvg; ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
@@ -105,7 +300,7 @@
 						  </div>
 
 						   <div>
-						     <span class="glyphicon glyphicon-user"></span>1,050,008 total
+						     <span class="glyphicon glyphicon-user"></span><?php echo $counterVortex; ?> total
 						   </div>
 
 						  <div class="col-xs-6 col-md-6">
@@ -118,8 +313,8 @@
 						         <div class="col-xs-8 col-md-9">
 						           <div class="progress progress-striped">
 						             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                                            aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-						                <span class="sr-only">80%</span>
+						                                            aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf5vortex";?>%">
+						                <span class="sr-only"><?php echo "$percOf5vortex";?>%</span>
 						             </div>
 						           </div>
 						         </div>
@@ -132,8 +327,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						                    <span class="sr-only">60%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf4vortex";?>%">
+						                    <span class="sr-only"><?php echo "$percOf4vortex";?>%</span>
 						                </div>
 						            </div>
 						         </div>
@@ -148,8 +343,8 @@
 						         <div class="col-xs-8 col-md-9">
 						              <div class="progress">
 						                   <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-						                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-						                          <span class="sr-only">40%</span>
+						                                        aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf3vortex";?>%">
+						                          <span class="sr-only"><?php echo "$percOf3vortex";?>%</span>
 						                   </div>
 						              </div>
 						         </div>
@@ -161,8 +356,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-						                  <span class="sr-only">20%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf2vortex";?>%">
+						                  <span class="sr-only"><?php echo "$percOf2vortex";?>%</span>
 						               </div>
 						            </div>
 						         </div>
@@ -176,8 +371,8 @@
 						        <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-						                  <span class="sr-only">15%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf1vortex";?>%">
+						                  <span class="sr-only"><?php echo "$percOf1vortex";?>%</span>
 						               </div>
 						            </div>
 						      </div>
@@ -233,7 +428,7 @@
                    <div id="2" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <!-- Review Area-->
-                      <h1 class="rating-num">Average: 4.0</h1>
+                      <h1 class="rating-num">Average: <?php echo $knokiaAvg; ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
@@ -241,7 +436,7 @@
 						  </div>
 
 						   <div>
-						     <span class="glyphicon glyphicon-user"></span>1,050,008 total
+						     <span class="glyphicon glyphicon-user"></span><?php echo $counterKnokia; ?> total
 						   </div>
 
 						  <div class="col-xs-6 col-md-6">
@@ -254,8 +449,8 @@
 						         <div class="col-xs-8 col-md-9">
 						           <div class="progress progress-striped">
 						             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                                            aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-						                <span class="sr-only">80%</span>
+						                                            aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf5knokia";?>%">
+						                <span class="sr-only"><?php echo "$percOf5knokia";?>%</span>
 						             </div>
 						           </div>
 						         </div>
@@ -268,8 +463,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						                    <span class="sr-only">60%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf4knokia";?>%">
+						                    <span class="sr-only"><?php echo "$percOf4knokia";?>%</span>
 						                </div>
 						            </div>
 						         </div>
@@ -284,8 +479,8 @@
 						         <div class="col-xs-8 col-md-9">
 						              <div class="progress">
 						                   <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-						                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-						                          <span class="sr-only">40%</span>
+						                                        aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf3knokia";?>%">
+						                          <span class="sr-only"><?php echo "$percOf3knokia";?>%</span>
 						                   </div>
 						              </div>
 						         </div>
@@ -297,8 +492,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-						                  <span class="sr-only">20%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf2knokia";?>%">
+						                  <span class="sr-only"><?php echo "$percOf2knokia";?>%</span>
 						               </div>
 						            </div>
 						         </div>
@@ -312,8 +507,8 @@
 						        <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-						                  <span class="sr-only">15%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf1knokia";?>%">
+						                  <span class="sr-only"><?php echo "$percOf1knokia";?>%</span>
 						               </div>
 						            </div>
 						      </div>
@@ -370,7 +565,7 @@
                    <div id="3" class="collapse">
                    	<div class="col-md-12 avaliar ">
                      <!-- Review Area-->
-                      <h1 class="rating-num">Average: 4.0</h1>
+                      <h1 class="rating-num">Average: <?php echo $neteroAvg; ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
@@ -378,7 +573,7 @@
 						  </div>
 
 						   <div>
-						     <span class="glyphicon glyphicon-user"></span>1,050,008 total
+						     <span class="glyphicon glyphicon-user"></span><?php echo $counterNetero; ?> total
 						   </div>
 
 						  <div class="col-xs-6 col-md-6">
@@ -391,8 +586,8 @@
 						         <div class="col-xs-8 col-md-9">
 						           <div class="progress progress-striped">
 						             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						       aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-						                <span class="sr-only">80%</span>
+						       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf5netero";?>%">
+						                <span class="sr-only"><?php echo "$percOf5netero";?>%</span>
 						             </div>
 						           </div>
 						         </div>
@@ -405,8 +600,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                   aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						                    <span class="sr-only">60%</span>
+						                   aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf4netero";?>%">
+						                    <span class="sr-only"><?php echo "$percOf4netero";?>%</span>
 						                </div>
 						            </div>
 						         </div>
@@ -421,8 +616,8 @@
 						         <div class="col-xs-8 col-md-9">
 						              <div class="progress">
 						                   <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-						                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-						                          <span class="sr-only">40%</span>
+						                                        aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf3netero";?>%">
+						                          <span class="sr-only"><?php echo "$percOf3netero";?>%</span>
 						                   </div>
 						              </div>
 						         </div>
@@ -434,8 +629,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-						                  <span class="sr-only">20%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf2netero";?>%">
+						                  <span class="sr-only"><?php echo "$percOf2netero";?>%</span>
 						               </div>
 						            </div>
 						         </div>
@@ -449,8 +644,8 @@
 						        <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-						                  <span class="sr-only">15%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf1netero";?>%">
+						                  <span class="sr-only"><?php echo "$percOf1netero";?>%</span>
 						               </div>
 						            </div>
 						      </div>
@@ -508,7 +703,7 @@
                    <div id="4" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <!-- Review Area-->
-                      <h1 class="rating-num">Average: 4.0</h1>
+                      <h1 class="rating-num">Average: <?php echo $meiAvg; ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
@@ -516,7 +711,7 @@
 						  </div>
 
 						   <div>
-						     <span class="glyphicon glyphicon-user"></span>1,050,008 total
+						     <span class="glyphicon glyphicon-user"></span><?php echo $counterMei; ?> total
 						   </div>
 
 						  <div class="col-xs-6 col-md-6">
@@ -529,8 +724,8 @@
 						         <div class="col-xs-8 col-md-9">
 						           <div class="progress progress-striped">
 						             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                                            aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-						                <span class="sr-only">80%</span>
+						                                            aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf5mei";?>%">
+						                <span class="sr-only"><?php echo "$percOf5mei";?>%</span>
 						             </div>
 						           </div>
 						         </div>
@@ -543,8 +738,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						                    <span class="sr-only">60%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf4mei";?>%">
+						                    <span class="sr-only"><?php echo "$percOf4mei";?>%</span>
 						                </div>
 						            </div>
 						         </div>
@@ -559,8 +754,8 @@
 						         <div class="col-xs-8 col-md-9">
 						              <div class="progress">
 						                   <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-						                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-						                          <span class="sr-only">40%</span>
+						                                        aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf3mei";?>%">
+						                          <span class="sr-only"><?php echo "$percOf3mei";?>%</span>
 						                   </div>
 						              </div>
 						         </div>
@@ -572,8 +767,8 @@
 						         <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-						                  <span class="sr-only">20%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf2mei";?>%">
+						                  <span class="sr-only"><?php echo "$percOf2mei";?>%</span>
 						               </div>
 						            </div>
 						         </div>
@@ -587,8 +782,8 @@
 						        <div class="col-xs-8 col-md-9">
 						            <div class="progress">
 						               <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-						                                       aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-						                  <span class="sr-only">15%</span>
+						                                       aria-valuemin="0" aria-valuemax="100" style="width: <?php echo "$percOf1mei";?>%">
+						                  <span class="sr-only"><?php echo "$percOf1mei";?>%</span>
 						               </div>
 						            </div>
 						      </div>
