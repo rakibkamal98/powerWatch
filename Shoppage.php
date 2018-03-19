@@ -234,7 +234,7 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
               <a class="nav-link js-scroll-trigger" href="AboutUs.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="Shoppage.html">Shop</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/Shoppage.php?voteMessage=">Shop</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="signIn.html">Login</a>
@@ -259,7 +259,7 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
       <div class="header">
       <center><h1 class="my-4">Power Watch Cases</h1></center>
     </div>
-
+    <center><a style="color: red"><?php echo $_GET['voteMessage'];?></a></center><br/>
       <!-- Project One -->
       <div class="row">
         <div class="col-md-6">
@@ -287,19 +287,43 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
           <div class="container">
             <div class="row" style="margin-top:20px; margin-bottom: 20px">
                <div class="col-md-12">
-               <form class="formtest">
+               <!--form class="formtest"-->
                  <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#1" onClick="hide(this)">Leave a review</button>
                    <div id="1" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <!-- Review Area-->
-                      <h1 class="rating-num">Average: <?php echo $vortexAvg; ?></h1>
+                      <h1 class="rating-num">Average: <?php echo round($vortexAvg, 2); ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star-empty"></span>
 						  </div>
+<!-- ____________________________ -->
+                   <form action="voteVortex.php" method="POST">
+                      <div>
+                        <input type="radio" id="1starVortex"
+                         name="starV" value="1">
+                        <label for="contactChoice1">1</label>
 
-						   <div>
+                        <input type="radio" id="2starVortex"
+                         name="starV" value="2">
+                        <label for="contactChoice2">2</label>
+
+                        <input type="radio" id="3starVortex"
+                         name="starV" value="3">
+                        <label for="contactChoice3">3</label>
+
+                        <input type="radio" id="4starVortex"
+                         name="starV" value="4">
+                        <label for="contactChoice3">4</label>
+
+                        <input type="radio" id="5starVortex"
+                         name="starV" value="5">
+                        <label for="contactChoice3">5</label>
+                      </div>
+                    
+    <!-- ____________________________ -->						   
+              <div>
 						     <span class="glyphicon glyphicon-user"></span><?php echo $counterVortex; ?> total
 						   </div>
 
@@ -383,12 +407,12 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
 						   </div>
                       <!-- End of Review Area-->
                 <div class="text-right">  
-                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
-                  <span class="btn btn-danger" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                  <button class="btn btn-success" type="submit" >Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span></form>
                 </div>  
             </div>
           </div>  
-        </form>
+        <!--/form-->
         </div>    
         </div>
         </div>
@@ -423,18 +447,42 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
           <div class="container">
             <div class="row" style="margin-top:20px; margin-bottom: 20px">
                <div class="col-md-12">
-               <form class="formtest">
+               <!--form class="formtest"-->
                  <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#2" onClick="esconder(this)">Leave a review</button>
                    <div id="2" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <!-- Review Area-->
-                      <h1 class="rating-num">Average: <?php echo $knokiaAvg; ?></h1>
+                      <h1 class="rating-num">Average: <?php echo round($knokiaAvg, 2); ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star-empty"></span>
 						  </div>
+<!-- ____________________________ -->
+                   <form action="voteKnokia.php" method="POST">
+                      <div>
+                        <input type="radio" id="1starKnokia"
+                         name="starK" value="1">
+                        <label for="contactChoice1">1</label>
 
+                        <input type="radio" id="2starKnokia"
+                         name="starK" value="2">
+                        <label for="contactChoice2">2</label>
+
+                        <input type="radio" id="3starKnokia"
+                         name="starK" value="3">
+                        <label for="contactChoice3">3</label>
+
+                        <input type="radio" id="4starKnokia"
+                         name="starK" value="4">
+                        <label for="contactChoice3">4</label>
+
+                        <input type="radio" id="5starKnokia"
+                         name="starK" value="5">
+                        <label for="contactChoice3">5</label>
+                      </div>
+                    
+    <!-- ____________________________ -->   
 						   <div>
 						     <span class="glyphicon glyphicon-user"></span><?php echo $counterKnokia; ?> total
 						   </div>
@@ -519,12 +567,12 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
 						   </div>
                       <!-- End of Review Area-->
                 <div class="text-right">  
-                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
-                  <span class="btn btn-danger" data-toggle="collapse" data-target="#2" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                  <button class="btn btn-success" type="submit">Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#2" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span></form>
                 </div>  
             </div>
           </div>  
-        </form>
+        <!--/form-->
         </div>    
         </div>
         </div>
@@ -560,18 +608,42 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
           <div class="container">
             <div class="row" style="margin-top:20px; margin-bottom: 20px">
                <div class="col-md-12">
-               <form class="formtest">
+               <!--form class="formtest"-->
                  <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#3" onClick="esconder(this)">Leave a review</button>
                    <div id="3" class="collapse">
                    	<div class="col-md-12 avaliar ">
                      <!-- Review Area-->
-                      <h1 class="rating-num">Average: <?php echo $neteroAvg; ?></h1>
+                      <h1 class="rating-num">Average: <?php echo round($neteroAvg,2); ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star-empty"></span>
 						  </div>
+<!-- ____________________________ -->
+                   <form action="voteNetero.php" method="POST">
+                      <div>
+                        <input type="radio" id="1starNetero"
+                         name="starN" value="1">
+                        <label for="contactChoice1">1</label>
 
+                        <input type="radio" id="2starNetero"
+                         name="starN" value="2">
+                        <label for="contactChoice2">2</label>
+
+                        <input type="radio" id="3starNetero"
+                         name="starN" value="3">
+                        <label for="contactChoice3">3</label>
+
+                        <input type="radio" id="4starNetero"
+                         name="starN" value="4">
+                        <label for="contactChoice3">4</label>
+
+                        <input type="radio" id="5starNetero"
+                         name="starN" value="5">
+                        <label for="contactChoice3">5</label>
+                      </div>
+                    
+    <!-- ____________________________ -->  
 						   <div>
 						     <span class="glyphicon glyphicon-user"></span><?php echo $counterNetero; ?> total
 						   </div>
@@ -656,12 +728,12 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
 						   </div>
                       <!-- End of Review Area-->
                 <div class="text-right">  
-                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
-                  <span class="btn btn-danger" data-toggle="collapse" data-target="#3" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                  <button class="btn btn-success" type="submit">Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#3" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span></form>
                 </div>  
             </div>
           </div>  
-        </form>
+        <!--/form-->
         </div>    
         </div>
         </div>
@@ -698,18 +770,42 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
           <div class="container">
             <div class="row" style="margin-top:20px; margin-bottom: 20px">
                <div class="col-md-12">
-               <form class="formtest">
+               <!--form class="formtest"-->
                  <button type="button" class="btaval btn btn-success" data-toggle="collapse" data-target="#4" onClick="esconder(this)">Leave a review</button>
                    <div id="4" class="collapse">
                      <div class="col-md-12 avaliar ">
                       <!-- Review Area-->
-                      <h1 class="rating-num">Average: <?php echo $meiAvg; ?></h1>
+                      <h1 class="rating-num">Average: <?php echo round($meiAvg, 2); ?></h1>
 						  <div class="rating">
 						   <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
 						   </span><span class="glyphicon glyphicon-star-empty"></span>
 						  </div>
+<!-- ____________________________ -->
+                   <form action="voteMei.php" method="POST">
+                      <div>
+                        <input type="radio" id="1starMei"
+                         name="starM" value="1">
+                        <label for="contactChoice1">1</label>
 
+                        <input type="radio" id="2starMei"
+                         name="starM" value="2">
+                        <label for="contactChoice2">2</label>
+
+                        <input type="radio" id="3starMei"
+                         name="starM" value="3">
+                        <label for="contactChoice3">3</label>
+
+                        <input type="radio" id="4starMei"
+                         name="starM" value="4">
+                        <label for="contactChoice3">4</label>
+
+                        <input type="radio" id="5starMei"
+                         name="starM" value="5">
+                        <label for="contactChoice3">5</label>
+                      </div>
+                    
+    <!-- ____________________________ --> 
 						   <div>
 						     <span class="glyphicon glyphicon-user"></span><?php echo $counterMei; ?> total
 						   </div>
@@ -794,12 +890,12 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
 						   </div>
                       <!-- End of Review Area-->
                 <div class="text-right">  
-                  <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
-                  <span class="btn btn-danger" data-toggle="collapse" data-target="#4" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
+                  <button class="btn btn-success" type="submit" >Submit <i class="fa fa-reply"></i> </button>
+                  <span class="btn btn-danger" data-toggle="collapse" data-target="#4" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span></form>
                 </div>  
             </div>
           </div>  
-        </form>
+        <!--/form-->
         </div>    
         </div>
     	</div>
