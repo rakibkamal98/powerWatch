@@ -75,8 +75,8 @@ $mail->addAddress($email, $name);     // Add a recipient
 
 //Content
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->Subject = 'Welcome new Power Watch user!';
+$mail->Body    = 'Welcome to Power Watch! We hope you enjoy your experience. Please contact us with any issues.';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 $mail->send();

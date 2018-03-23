@@ -34,7 +34,7 @@ $mail->addAddress('powerwatch0@gmail.com');     // Add a recipient
 
 //Content
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = $email;
+$mail->Subject = $name . ' ' . $email;
 $mail->Body    = $message;
 $mail->AltBody = $message;
 
