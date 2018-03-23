@@ -436,11 +436,11 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
           	<label>0.01 BTC</label>
           <!-- Button -->
 			   <form action="https://test.bitpay.com/checkout" method="post" >
-			  <input type="hidden" name="action" value="checkout" />
-			  <input type="hidden" name="posData" value="" />
-			  <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhudP5GeIHelgtGmF0+Jk/kJjNB2HlxJLj4vq4jMg8sauDT8an+1mXSyz5W4ZmTrg/5OXKuHQK/ADnOOd4GZeT1KuBpHt/ZznnvhvGKE2bTioZ4AtFcPauvUmcY9/+YOiE" />
-			  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-			</form>
+          <input type="hidden" name="action" value="checkout" />
+          <input type="hidden" name="posData" value="" />
+          <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMMCfywRrKpTx20b47a2Hbf8cSAvlHuHCXIAbtdeMiIa2pYd/o2mSP3JHC/cT0nYN9On1c381JYEBA2RtlQYQGN5phfzf2bsa75qzn8BzTmcX6o9/5WokUo5CStQw2VXXCwQ==" />
+          <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+        </form>
 		</div>
 		<!-- End of button-->
 		<!-- Product review-->
