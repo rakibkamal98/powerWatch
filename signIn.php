@@ -57,16 +57,19 @@
 
     <div class="container-sign" style="margin-top: 100px">
 
-      <form class="form-signin">
+      <form class="form-signin" action ="infoLogin.php" method="POST" >
         <h2 class="form-signin-heading" style="text-align: center;">Sign In</h2>
+
+        <center><a style="color: red"><?php echo $_GET['loginMessage'];?></a></center>
+
         <label for="inputEmail" class="sr-only">Email address</label>
         <a>Email Address: </a>
-        <input type="email" id="inputEmail" class="form-control" required autofocus>
+        <input type="email" name = "Email" id="inputEmail" class="form-control" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <a>Password: </a>
-        <input type="password" id="inputPassword" class="form-control" required>
+        <input type="password" id="inputPassword" class="form-control" name = "Password" required>
    
-        <input type="submit" value="Sign up">
+        <input type="submit" value="Sign In">
       </form>
 
     </div> <!-- /container -->

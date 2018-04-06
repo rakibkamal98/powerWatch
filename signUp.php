@@ -41,7 +41,7 @@
               <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/Shoppage.php?voteMessage=">Shop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="signIn.html">Login</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signIn.php?loginMessage=">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signUp.php?message=&welcomeMessage=">Sign Up</a>
