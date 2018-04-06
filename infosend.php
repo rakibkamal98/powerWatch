@@ -30,7 +30,8 @@ if($email != ""){
 		$message = '';
 		$sql = "INSERT INTO customer_info (Name,Email,Password,Address,City,State,Zipcode)
 			VALUES('$name','$email','$password','$address','$city','$state','$zipcode')";
-		header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name");
+		header("Location: http://localhost/powerWatch/memberHome.html");
+		# header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name");
 	}
 }
 
