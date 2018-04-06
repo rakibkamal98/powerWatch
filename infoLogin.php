@@ -14,7 +14,7 @@ if($email != ""){
 		$row = mysqli_fetch_assoc($result);
 		$hashPass = hash('sha512', $password);
 		if($hashPass == $row["Password"]){
-			header("Location: http://localhost/powerWatch/signIn.php?loginMessage=Peace and Love");#-- REDIRECT TO HOME PAGE --#
+			header("Location: http://localhost/powerWatch/signIn.php?loginMessage=Peace");#-- REDIRECT TO HOME PAGE --#
 		} else {
 			header("Location: http://localhost/powerWatch/signIn.php?loginMessage=Incorrect%20Login");
 		}
