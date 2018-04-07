@@ -254,7 +254,7 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
                 <?php if(isset($_SESSION['Name'])){echo "Logout";} else {echo "SignUp";}?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="contactUs.html">Contact Us</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/contactUs.php?emailSent=">Contact Us</a>
             </li>
           </ul>
         </div>
