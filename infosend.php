@@ -1,6 +1,6 @@
 <?php 
 #include_once "connection.php";
-
+session_start();
 #--include -- 
 $conn = mysqli_connect('localhost','root','','ecommerce');
 if(! $conn){
@@ -30,8 +30,11 @@ if($email != ""){
 		$message = '';
 		$sql = "INSERT INTO customer_info (Name,Email,Password,Address,City,State,Zipcode)
 			VALUES('$name','$email','$password','$address','$city','$state','$zipcode')";
-		header("Location: http://localhost/powerWatch/memberHome.html");
-		# header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name");
+		
+		$_SESSION['Name'] = $name;
+		$_SESSION['Email'] = $email;
+
+		header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name");
 	}
 }
 

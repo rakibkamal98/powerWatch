@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: #525151">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/logo.png" alt="" height="50" width="50"> Power Watch</a>
+        <a class="navbar-brand js-scroll-trigger" href="http://localhost/powerWatch/index.php"><img src="img/logo.png" alt="" height="50" width="50"> Power Watch</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -37,7 +37,7 @@
               <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/AboutUs.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/Shoppage.php?voteMessage=">Shop</a>
+              <a class="nav-link js-scroll-trigger" <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/Shoppage.php?voteMessage="';} else {echo 'href="http://localhost/powerWatch/Shoppage.html"';}?>>Shop</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
