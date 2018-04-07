@@ -5,5 +5,5 @@
 	session_unset();
 	session_destroy();
 	$_SESSION = array();
-	header("Location: http://localhost/powerWatch/memberHome.html");
+	header("Location: http://localhost/powerWatch/memberHome.php");
 ?>

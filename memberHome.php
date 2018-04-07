@@ -1,4 +1,8 @@
 
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sign In</title>
+    <title>MemberZone</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,9 +25,16 @@
     <link href="css/grayscale.css" rel="stylesheet">
 
   </head>
-  
+
 
   <body class ="sign-bg">
+    <div style="padding-top: 175px">
+      <center><h1>Welcome <?php if(isset($_SESSION['Name'])){echo $name;}?>!</h1></center>
+    </div>
+    <div>
+      <font size="6"><p><center>Thanks for choosing Power Watch!</center></p></font>
+      <font size="6"><p><center>You can now make purchases of our excellent chargeable cases</center></p></font>
+    </div>
 
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -36,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="AboutUs.html">About</a>
+              <a class="nav-link js-scroll-trigger" href="AboutUs.php">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/Shoppage.php?voteMessage=">Shop</a>
@@ -48,7 +59,7 @@
               <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signUp.php?message=&welcomeMessage=">Sign Up</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="contactUs.html">Contact Us</a>
+              <a class="nav-link js-scroll-trigger" href="contactUs.php">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -56,11 +67,14 @@
     </nav>
     <!-- End of Navigation-->
 
-    <div class="container-sign" style="margin-top: 100px">
-
-<p> Welcome [Enter user]!</p>
-
-    </div> <!-- /container -->
+<div class="container" style ="padding-top: 400px">
+  <div class="container-sign">
+    <form action="infosend.php" method="POST"> 
+      <form class="form-signin">
+        <h2 class="form-signin-heading" style="text-align: center;">Change password</h2>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <a>Password:</a>
+        <input type="password" id="inputPassword" class="form-control" name="Password" required>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
