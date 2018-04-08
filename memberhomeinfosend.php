@@ -8,8 +8,7 @@ if(! $conn){
 }
 #--End of include
 $password = $_POST['Password'];
-//$password = $_POST['Password'];
-//$password = hash('sha512', $password);
+$password = hash('sha512', $password);
 $mail = $_SESSION['Email'];
 
 
@@ -17,7 +16,7 @@ if($password != ""){
 	$sql = "SELECT * FROM customer_info WHERE Email='" .$mail. "'";
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result)>0){
-		$sql = "UPDATE customer_info SET Password= $password WHERE Email='" .$mail. "'";
+		$sql = "UPDATE customer_info SET Password='$password' WHERE Email='" .$mail. "'";
 		$result = mysqli_query($conn, $sql);
 
 		

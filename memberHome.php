@@ -37,9 +37,9 @@
     </div>
 
         <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: #525151">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php"><img src="img/logo.png" alt="" height="50" width="50"> Power Watch</a>
+        <a class="navbar-brand js-scroll-trigger" href="http://localhost/powerWatch/index.php"><img src="img/logo.png" alt="" height="50" width="50"> Power Watch</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -47,19 +47,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="AboutUs.php">About</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/AboutUs.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/Shoppage.php?voteMessage=">Shop</a>
+              <a class="nav-link js-scroll-trigger" <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/Shoppage.php?voteMessage="';} else {echo 'href="http://localhost/powerWatch/Shoppage.html"';}?>>Shop</a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" 
+
+              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php"';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
+
+                >
+
+                <?php if(isset($_SESSION['Name'])){echo "MemberZone";} else {echo "Login";}?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signIn.php?loginMessage=">Login</a>
+              <a class="nav-link js-scroll-trigger" 
+              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/logout.php"';} else {echo 'href="http://localhost/powerWatch/signUp.php?message=&welcomeMessage="';}?>
+
+                >
+                <?php if(isset($_SESSION['Name'])){echo "Logout";} else {echo "SignUp";}?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/signUp.php?message=&welcomeMessage=">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="contactUs.php">Contact Us</a>
+              <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/contactUs.php?emailSent=">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -71,9 +81,9 @@
 <div class="container" style="margin-top: 300px">
     <div class="container-contact">
         <form action="promo.php" method="POST">
-            <h2>Enter Promo Code!</h2>
+            <h2 style="text-align: center;">Enter Promo Code!</h2>
             <label>Enter Promo Code:</label>
-            <input type="text" name="Promo" id="Promo" pattern="[a-zA-Z0-9]+" required>
+            <input type="text" name="Promo" id="promo" pattern="[a-zA-Z0-9]+" required>
             <div>
                 <input type="submit" name="Enter">
             </div>
