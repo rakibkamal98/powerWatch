@@ -21,6 +21,9 @@ if($promo != ""){
 			//$sql = "UPDATE customer_info SET Promo='1' WHERE Email='$mail'";
 			header("Location: http://localhost/powerWatch/ShoppagePromo.php?voteMessage=");
 		}
+		else {
+			header("Location: http://localhost/powerWatch/memberHome.php");
+		}
 	} else {
 		$message = 'Not logged in!';
 		header("Location: http://localhost/powerWatch/signIn.php?message=Please log in&welcomeMessage=");
