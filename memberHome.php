@@ -29,7 +29,7 @@
 
   <body class ="sign-bg">
     <div style="padding-top: 175px">
-      <center><h1>Welcome <?php if(isset($_SESSION['Name'])){echo $name;}?>!</h1></center>
+      <center><h1>Welcome <?php if(isset($_SESSION['Name'])){echo $_SESSION['Name'];}?>!</h1></center>
     </div>
     <div>
       <font size="6"><p><center>Thanks for choosing Power Watch!</center></p></font>
@@ -69,12 +69,14 @@
 
 <div class="container" style ="padding-top: 400px">
   <div class="container-sign">
-    <form action="infosend.php" method="POST"> 
+    <form action="memberhomeinfosend.php" method="POST"> 
       <form class="form-signin">
         <h2 class="form-signin-heading" style="text-align: center;">Change password</h2>
         <label for="inputPassword" class="sr-only">Password</label>
         <a>Password:</a>
         <input type="password" id="inputPassword" class="form-control" name="Password" required>
+        <input type="submit" value="Change Password">
+      </form>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -9,22 +9,34 @@ if(! $conn){
 #--End of include
 $password = $_POST['Password'];
 //$password = $_POST['Password'];
-$password = hash('sha512', $password);
+//$password = hash('sha512', $password);
+$mail = $_SESSION['Email'];
 
-UPDATE `customer_info` SET `Password`=[value-8] WHERE 1
 
 if($password != ""){
-	$sql = "SELECT * FROM customer_info WHERE Password='" .$password. "'";
+	$sql = "SELECT * FROM customer_info WHERE Email='" .$mail. "'";
 	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result)>0){
+		$sql = "UPDATE customer_info SET Password= $password WHERE Email='" .$mail. "'";
+		$result = mysqli_query($conn, $sql);
+
+		
+
+	//how to retrieve information from the database and process it
 	//if(mysqli_num_rows($result)>0){
 		//$message = 'Incorrect email';
 		//header("Location: http://localhost/powerWatch/signUp.php?message=Email already exists&welcomeMessage=");
 	//} else {
-		$message = '';
-		$sql = UPDATE `customer_info` SET `Password`=[value-8] WHERE 1
+		$message = 'Password changed';
+		echo $message;
 		
-		header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name");
+		header("Location: http://localhost/powerWatch/memberHome.php?message=&welcomeMessage=Welcome");
 	}
+	else{
+		$message = 'error';
+		echo $message;
+	}
+
 }
 
 $value = mysqli_query($conn, $sql);
