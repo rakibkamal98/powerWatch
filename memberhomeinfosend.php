@@ -38,4 +38,4 @@ if($password != ""){
 
 }
 
-$value = mysqli_query($conn, $sql);
+?>
