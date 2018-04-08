@@ -16,7 +16,8 @@ if($promo != ""){
 	if(mysqli_num_rows($result)>0){
 		$sql = "SELECT Promo FROM customer_info WHERE Email='" .$mail. "'";
 		$result = mysqli_query($conn, $sql);
-		if($promo == "weaver" && $result == "0"){
+		$row = mysqli_fetch_assoc($result);
+		if($promo == 'weaver' && $row["Promo"] == 0){
 			//$sql = "UPDATE customer_info SET Promo='1' WHERE Email='$mail'";
 			header("Location: http://localhost/powerWatch/ShoppagePromo.php?voteMessage=");
 		}

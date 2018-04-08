@@ -67,7 +67,22 @@
     </nav>
     <!-- End of Navigation-->
 
-<div class="container" style ="padding-top: 400px">
+<!-- Promo Code -->
+<div class="container" style="margin-top: 300px">
+    <div class="container-contact">
+        <form action="promo.php" method="POST">
+            <h2>Enter Promo Code!</h2>
+            <label>Enter Promo Code:</label>
+            <input type="text" name="Promo" id="Promo" pattern="[a-zA-Z0-9]+" required>
+            <div>
+                <input type="submit" name="Enter">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Password change -->
+<div class="container" style ="padding-top: 50px">
   <div class="container-sign">
     <form action="memberhomeinfosend.php" method="POST"> 
       <form class="form-signin">
@@ -77,6 +92,9 @@
         <input type="password" id="inputPassword" class="form-control" name="Password" required>
         <input type="submit" value="Change Password">
       </form>
+    </form>
+  </div>
+</div>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
