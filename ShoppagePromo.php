@@ -197,7 +197,8 @@ $percOf1mei = ($numOf1mei/$counterMei)*100;
 $mail = $_SESSION['Email'];
 $sql = "SELECT Promo FROM customer_info WHERE Email='" .$mail. "'";
 $result = mysqli_query($conn, $sql);
-if ($result == 1) {
+$row = mysqli_fetch_assoc($result);
+if ($row["Promo"] == 1) {
   header("Location: http://localhost/powerWatch/Shoppage.php?voteMessage=You already used that Promo code!");
   exit();
 }
@@ -292,12 +293,14 @@ if ($result == 1) {
           <!-- Buy Button -->
           <div class="block">
           	<label>0.008 BTC</label>
+            <!--<form action="buyPromo.php">-->
             <form action="https://test.bitpay.com/checkout" method="post" >
               <input type="hidden" name="action" value="checkout" />
               <input type="hidden" name="posData" value="" />
-              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMME9aRt9OB4V/GkuA/0RvW8918sCybotLO7A0pcrGmq/S+o8NfUEkHiRfpLvfEM32kGI+HCMoA0OMRAiSoVBz4zkh/44/8RW19S4zublyFo1ik8kKEHGajLGABSKKEMpgYg==" />
+              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMME9aRt9OB4V/GkuA/0RvW8918sCybotLO7A0pcrGmq/S+o8NfUEkHiRfpLvfEM32kGI+HCMoA0OMRAiSoVBz4znkNq44PVvfNywTNzNNsi/4" />
               <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
             </form>
+            <!--</form>-->
 		      </div>
         <!-- End of button-->
 
@@ -456,7 +459,7 @@ if ($result == 1) {
     			  <form action="https://test.bitpay.com/checkout" method="post" >
               <input type="hidden" name="action" value="checkout" />
               <input type="hidden" name="posData" value="" />
-              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMME9aRt9OB4V/GkuA/0RvW8918sCybotLO7A0pcrGmq/S+o8NfUEkHiRfpLvfEM32kGI+HCMoA0OMRAiSoVBz4zkh/44/8RW19S4zublyFo1ik8kKEHGajLGABSKKEMpgYg==" />
+              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMME9aRt9OB4V/GkuA/0RvW8918sCybotLO7A0pcrGmq/S+o8NfUEkHiRfpLvfEM32kGI+HCMoA0OMRAiSoVBz4znkNq44PVvfNywTNzNNsi/4" />
               <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
             </form>
 		      </div>
@@ -614,10 +617,10 @@ if ($result == 1) {
           <div class="block">
           	 <label>0.04 BTC</label>
          <!-- Buy Button -->
-             <form action="https://test.bitpay.com/checkout" method="post" >
+            <form action="https://test.bitpay.com/checkout" method="post" >
               <input type="hidden" name="action" value="checkout" />
               <input type="hidden" name="posData" value="" />
-              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMMMozBqfZXUhgEWM9r1HYVwwIjrV5EJuNlh5KtE+Edlokdf27DUif5CBeJyuu+FFhK+KgCzeKUeqHjqPwWvt8kdYh49scKm0RwRE7zelCDygJljR8yqsZS0w19nUKItOB3g==" />
+              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMMMozBqfZXUhgEWM9r1HYVwwIjrV5EJuNlh5KtE+Edlokdf27DUif5CBeJyuu+FFhK95ta5QoJZJ4fVBYg8uj0XhVXU15/7wuU7uFhTP/BGXj" />
               <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
             </form>
 			   </div>
@@ -779,7 +782,7 @@ if ($result == 1) {
             <form action="https://test.bitpay.com/checkout" method="post" >
               <input type="hidden" name="action" value="checkout" />
               <input type="hidden" name="posData" value="" />
-              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMME9aRt9OB4V/GkuA/0RvW8918sCybotLO7A0pcrGmq/S+o8NfUEkHiRfpLvfEM32kGI+HCMoA0OMRAiSoVBz4zkh/44/8RW19S4zublyFo1ik8kKEHGajLGABSKKEMpgYg==" />
+              <input type="hidden" name="data" value="ZIIfZSCIQCb/tOsLmQCOA0FPBgxzZbAUVLJ2ioQogoQqfy0Lri54QnF5KZkwQzuhf0AZXI948U4/GboRYPGMME9aRt9OB4V/GkuA/0RvW8918sCybotLO7A0pcrGmq/S+o8NfUEkHiRfpLvfEM32kGI+HCMoA0OMRAiSoVBz4znkNq44PVvfNywTNzNNsi/4" />
               <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
             </form>
 		      </div>

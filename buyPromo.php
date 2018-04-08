@@ -7,22 +7,19 @@ if(! $conn){
 }
 #--End of include
 
-$promo = $_POST['Promo'];
 $mail = $_SESSION['Email'];
 
-if($promo != ""){
+if($mail != ""){
 	$sql = "SELECT * FROM customer_info WHERE Email='" .$mail. "'";
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result)>0){
-		$sql = "SELECT Promo FROM customer_info WHERE Email='" .$mail. "'";
+		$sql = "UPDATE customer_info SET Promo='1' WHERE Email='$mail'";
 		$result = mysqli_query($conn, $sql);
-		if($promo == "weaver" && $result == "0"){
-			//$sql = "UPDATE customer_info SET Promo='1' WHERE Email='$mail'";
-			header("Location: http://localhost/powerWatch/ShoppagePromo.php?voteMessage=");
-		}
+		header("Location: http://localhost/powerWatch/Shoppage.php?voteMessage=");
+		
 	} else {
 		$message = 'Not logged in!';
-		header("Location: http://localhost/powerWatch/signIn.php?message=Please log in&welcomeMessage=");
+		header("Location: http://localhost/powerWatch/Shoppage.php?voteMessage=");
 	}
 }
 
