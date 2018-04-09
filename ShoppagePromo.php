@@ -202,6 +202,13 @@ if ($row["Promo"] == 1) {
   header("Location: http://localhost/powerWatch/Shoppage.php?voteMessage=You already used that Promo code!");
   exit();
 }
+
+$sql = "SELECT Weaver FROM customer_info WHERE Email='" .$mail. "'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+if($row["Weaver"] != 1) {
+  header("Location: http://localhost/powerWatch/Shoppage.php?voteMessage=Nice try hacker!");
+}
 ?>
 
 <html lang="en">

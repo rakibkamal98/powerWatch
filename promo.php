@@ -18,7 +18,8 @@ if($promo != ""){
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		if($promo == 'weaver' && $row["Promo"] == 0){
-			//$sql = "UPDATE customer_info SET Promo='1' WHERE Email='$mail'";
+			$sql = "UPDATE customer_info SET Weaver='1' WHERE Email='$mail'";
+			$result = mysqli_query($conn, $sql);
 			header("Location: http://localhost/powerWatch/ShoppagePromo.php?voteMessage=20% Discount Applied!");
 		}
 		else {
