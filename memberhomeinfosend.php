@@ -24,10 +24,10 @@ if($password != ""){
 			$result = mysqli_query($conn, $sql);
 
 			$message = 'Password changed';
-			header("Location: http://localhost/powerWatch/memberHome.php?passwordMessage=".$message);
+			header("Location: http://localhost/powerWatch/memberHome.php?promoMessage=&passwordMessage=".$message);
 		} else {
 			$message = 'Incorrect Password';
-			header("Location: http://localhost/powerWatch/memberHome.php?passwordMessage=".$message);
+			header("Location: http://localhost/powerWatch/memberHome.php?promoMessage=&passwordMessage=".$message);
 		}
 	}
 }

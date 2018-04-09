@@ -43,7 +43,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
 
-              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php?passwordMessage="';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
+              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php?passwordMessage=&promoMessage="';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
 
                 >
 

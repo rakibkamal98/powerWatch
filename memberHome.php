@@ -34,6 +34,7 @@
   <body class ="sign-bg">
     <div style="padding-top: 175px">
       <center><h1>Welcome <?php if(isset($_SESSION['Name'])){echo $_SESSION['Name'];}?>!</h1></center>
+      <center><h5 style="color: red"><?php echo $_GET['promoMessage'];?></h5></center>
     </div>
     <div>
       <font size="6"><p><center>Thanks for choosing Power Watch!</center></p></font>
@@ -59,7 +60,7 @@
            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
 
-              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php?passwordMessage="';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
+              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php?passwordMessage=&promoMessage="';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
 
                 >
 

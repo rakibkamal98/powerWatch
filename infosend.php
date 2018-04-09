@@ -34,7 +34,7 @@ if($email != ""){
 		$_SESSION['Name'] = $name;
 		$_SESSION['Email'] = $email;
 
-		header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=Welcome, $name - Use Promocode: 'weaver' for 20% off!");
+		header("Location: http://localhost/powerWatch/memberHome.php?passwordMessage=&promoMessage=New User Special! Enter code 'weaver' for 20% off!");
 	}
 }
 
