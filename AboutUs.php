@@ -39,6 +39,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/Shoppage.php?voteMessage="';} else {echo 'href="http://localhost/powerWatch/Shoppage.html"';}?>>Shop</a>
             </li>
+            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
 
@@ -48,6 +49,7 @@
 
                 <?php if(isset($_SESSION['Name'])){echo "MemberZone";} else {echo "Login";}?></a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
 
@@ -59,6 +61,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="http://localhost/powerWatch/contactUs.php?emailSent=">Contact Us</a>
             </li>
+
           </ul>
         </div>
       </div>

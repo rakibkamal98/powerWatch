@@ -14,12 +14,12 @@ if($promo != ""){
 	$sql = "SELECT * FROM customer_info WHERE Email='" .$mail. "'";
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result)>0){
-		$sql = "SELECT Promo FROM customer_info WHERE Email='" .$mail. "'";
+		#$sql = "SELECT Promo FROM customer_info WHERE Email='" .$mail. "'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		if($promo == 'weaver' && $row["Promo"] == 0){
 			//$sql = "UPDATE customer_info SET Promo='1' WHERE Email='$mail'";
-			header("Location: http://localhost/powerWatch/ShoppagePromo.php?voteMessage=");
+			header("Location: http://localhost/powerWatch/ShoppagePromo.php?voteMessage=20% Discount Applied!");
 		}
 		else {
 			header("Location: http://localhost/powerWatch/memberHome.php");

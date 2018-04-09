@@ -52,7 +52,7 @@
                 <?php if(isset($_SESSION['Name'])){echo "MemberZone";} else {echo "Login";}?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" http://localhost/powerWatch/memberHome.php?passwordMessage=
+              <a class="nav-link js-scroll-trigger"
 
               <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/logout.php"';} else {echo 'href="http://localhost/powerWatch/signUp.php?message=&welcomeMessage="';}?>
 
