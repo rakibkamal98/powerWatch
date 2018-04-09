@@ -8,7 +8,9 @@ if(! $conn){
 }
 #--End of include
 $password = $_POST['Password'];
+$currentPassword = $_POST['CurrentPassword'];
 $password = hash('sha512', $password);
+$currentPassword = hash('sha512', $currentPassword);
 $mail = $_SESSION['Email'];
 
 
@@ -16,26 +18,18 @@ if($password != ""){
 	$sql = "SELECT * FROM customer_info WHERE Email='" .$mail. "'";
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result)>0){
-		$sql = "UPDATE customer_info SET Password='$password' WHERE Email='" .$mail. "'";
-		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		if($row['Password']==$currentPassword){
+			$sql = "UPDATE customer_info SET Password='$password' WHERE Email='" .$mail. "'";
+			$result = mysqli_query($conn, $sql);
 
-		
-
-	//how to retrieve information from the database and process it
-	//if(mysqli_num_rows($result)>0){
-		//$message = 'Incorrect email';
-		//header("Location: http://localhost/powerWatch/signUp.php?message=Email already exists&welcomeMessage=");
-	//} else {
-		$message = 'Password changed';
-		echo $message;
-		
-		header("Location: http://localhost/powerWatch/memberHome.php?message=&welcomeMessage=Welcome");
+			$message = 'Password changed';
+			header("Location: http://localhost/powerWatch/memberHome.php?passwordMessage=".$message);
+		} else {
+			$message = 'Incorrect Password';
+			header("Location: http://localhost/powerWatch/memberHome.php?passwordMessage=".$message);
+		}
 	}
-	else{
-		$message = 'error';
-		echo $message;
-	}
-
 }
 
 ?>

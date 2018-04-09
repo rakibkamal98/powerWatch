@@ -46,6 +46,11 @@ a {
   color: #42DCA3;
 }
 
+.product {
+   margin: 10px;
+   border: 1px solid #CADFE4;
+}
+
 a:focus, a:hover {
   text-decoration: none;
   color: #1d9b6c;

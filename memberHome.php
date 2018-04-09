@@ -1,6 +1,10 @@
 
 <?php 
   session_start();
+
+  if(!isset($_SESSION['Name'])){
+    header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +59,7 @@
            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
 
-              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php"';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
+              <?php if(isset($_SESSION['Name'])){echo 'href="http://localhost/powerWatch/memberHome.php?passwordMessage="';} else {echo 'href="http://localhost/powerWatch/signIn.php?loginMessage="';}?>
 
                 >
 
@@ -92,17 +96,59 @@
 </div>
 
 <!-- Password change -->
-<div class="container" style ="padding-top: 50px">
+<div class="container" style ="padding-top: 120px">
   <div class="container-sign">
     <form action="memberhomeinfosend.php" method="POST"> 
       <form class="form-signin">
         <h2 class="form-signin-heading" style="text-align: center;">Change password</h2>
+        <label for="inputPassword" class="sr-only">Current Password</label>
+            <a>Current Password: </a><a style="color: red"><?php echo $_GET['passwordMessage'];?></a>
+        <input type="password" id="inputCurrentPassword" class="form-control" name="CurrentPassword" required>
+
         <label for="inputPassword" class="sr-only">Password</label>
-        <a>Password:</a>
+            <a>New Password:</a>
         <input type="password" id="inputPassword" class="form-control" name="Password" required>
+
+
         <input type="submit" value="Change Password">
       </form>
     </form>
+  </div>
+</div>
+
+<!-- Shopping -->
+<div class="container" style ="padding-top: 200px">
+  <div class="container-sign">
+      <div  style="overflow-y:scroll; height:400px;">
+        
+            <br />
+        <div class="product">
+            <img src="img/vortex.jpg" style="max-width: 15%">
+            Vortex 350: Best selling!  
+            <input type="button" name="vortexBuy" value="Buy">
+        </div>
+        <br />
+        <div class="product">
+            <img src="img/knokia.jpg" style="max-width: 15%">
+            The Knokia: Most durable!  
+            <input type="button" name="vortexBuy" value="Buy">
+        </div>
+        <br />
+        <div class="product">
+            <img src="img/netero.jpg" style="max-width: 15%">
+            Netero: Most luxurious!  
+            <input type="button" name="vortexBuy" value="Buy">
+        </div>
+        <br />
+        <div class="product">
+            <img src="img/mei.jpg" style="max-width: 15%">
+            Mei: Water Resistant!  
+            <input type="button" name="vortexBuy" value="Buy">
+        </div>
+        <br />
+
+  
+      </div>
   </div>
 </div>
 
