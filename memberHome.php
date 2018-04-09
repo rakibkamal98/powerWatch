@@ -126,25 +126,25 @@
         <div class="product">
             <img src="img/vortex.jpg" style="max-width: 15%">
             Vortex 350: Best selling!  
-            <input type="button" name="vortexBuy" value="Buy">
+            <input type="button" name="vortexBuy" value="Buy" onclick="location.href = 'http://localhost/powerWatch/Shoppage.php?voteMessage=';">
         </div>
         <br />
         <div class="product">
             <img src="img/knokia.jpg" style="max-width: 15%">
             The Knokia: Most durable!  
-            <input type="button" name="vortexBuy" value="Buy">
+            <input type="button" name="vortexBuy" value="Buy" onclick="location.href = 'http://localhost/powerWatch/Shoppage.php?voteMessage=';">
         </div>
         <br />
         <div class="product">
             <img src="img/netero.jpg" style="max-width: 15%">
             Netero: Most luxurious!  
-            <input type="button" name="vortexBuy" value="Buy">
+            <input type="button" name="vortexBuy" value="Buy" onclick="location.href = 'http://localhost/powerWatch/Shoppage.php?voteMessage=';">
         </div>
         <br />
         <div class="product">
             <img src="img/mei.jpg" style="max-width: 15%">
             Mei: Water Resistant!  
-            <input type="button" name="vortexBuy" value="Buy">
+            <input type="button" name="vortexBuy" value="Buy" onclick="location.href = 'http://localhost/powerWatch/Shoppage.php?voteMessage=';">
         </div>
         <br />
 
