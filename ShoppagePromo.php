@@ -6,6 +6,11 @@ if(! $conn){
 }
 #--End of include
 session_start();
+
+if(!isset($_SESSION['Name'])){
+    header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=");
+  }
+  
 #Vortex reviews
 $sql = "SELECT * FROM vortexreviews";
 $result = mysqli_query($conn, $sql);
