@@ -19,7 +19,7 @@ if($email != ""){
 			$_SESSION['Name'] = $row["Name"];
 			$_SESSION['Email'] = $row["Email"];
 		
-			header("Location: http://localhost/powerWatch/signIn.php?loginMessage=Peace");#-- REDIRECT TO HOME PAGE --#
+			header("Location: http://localhost/powerWatch/memberHome.php?passwordMessage=");#-- REDIRECT TO HOME PAGE --#
 		} else {
 			header("Location: http://localhost/powerWatch/signIn.php?loginMessage=Incorrect%20Login");
 		}
