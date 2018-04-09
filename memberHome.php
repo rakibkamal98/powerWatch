@@ -3,7 +3,7 @@
   session_start();
 
   if(!isset($_SESSION['Name'])){
-    header("Location: http://localhost/powerWatch/signUp.php?message=&welcomeMessage=");
+    header("Location: http://localhost/powerWatch/signIn.php?loginMessage=");
   }
 ?>
 
